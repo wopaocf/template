@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ImoocMerchants
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://103.85.224.102:3306/passbook?autoReconnect=true
+    username: root
+    password: a4183129
+  kafka:
+    bootstrap-servers: 103.85.224.102:9092
+    consumer:
+      group-id: passbook
+    listener:
+      concurrency: 4
+server:
+  port: 8080
+
+logging:
+  level:
+      root: info
+  file: imooc-merchant.log
